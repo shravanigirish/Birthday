@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy Birthday Uday</title>
+
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@400;500&display=swap" rel="stylesheet">
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box;}
+
+body{
+  background:#f7f4dc;
+  overflow:hidden;
+  font-family:'Poppins', sans-serif;
+  color:#c0392b;
+}
+
+h1,h2{
+  font-family:'Great Vibes', cursive;
+  color:#7a3b2e;
+}
+
+.slide{
+  width:100vw;
+  height:100vh;
+  display:none;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  padding:20px;
+}
+.slide.active{display:flex;}
+
+.hearts span{
+  position:absolute;
+  font-size:14px;
+  animation:float 8s linear infinite;
+  opacity:0.6;
+}
+@keyframes float{
+  0%{transform:translateY(100vh);opacity:0;}
+  50%{opacity:1;}
+  100%{transform:translateY(-10vh);opacity:0;}
+}
+
+/* slide 1 */
+.slide1 h1{font-size:3.2rem;margin-bottom:10px;}
+.slide1 p{margin-bottom:30px;}
+.btn{
+  background:#e05a6f;
+  color:#fff;
+  padding:14px 32px;
+  border-radius:30px;
+  border:none;
+  font-size:1rem;
+}
+
+.typing{
+  border-right:2px solid #7a3b2e;
+  white-space:pre-line;   /* ✅ allows line break */
+  overflow:hidden;
+}
+
+/* slide 2 */
+.slide2{flex-direction:column;}
+.grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:15px;
+  max-width:900px;
+  width:100%;
+}
+.photo-box{
+  position:relative;
+  text-align:center;     /* ✅ center quote under image */
+}
+.img{
+  height:160px;
+  border-radius:15px;
+  background-size:cover;
+  background-position:center;
+}
+.msg{
+  font-size:0.85rem;
+  margin-top:8px;
+  opacity:1;             /* ✅ always visible */
+  color:#7a3b2e;
+}
+
+/* slide 3 */
+.slide3{
+  background:linear-gradient(135deg,#6f7fdc,#7b4fdc);
+}
+.card{
+  background:#d9c9f0;
+  padding:30px;
+  border-radius:20px;
+  max-width:600px;
+}
+</style>
+</head>
+
+<body onclick="nextSlide()">
+
+<!-- 🔊 BACKGROUND MUSIC -->
+<audio id="bgMusic" loop>
+  <source src="music/birthday.mp3" type="audio/mpeg">
+</audio>
+
+<div class="hearts">
+  <span style="left:10%">💗</span>
+  <span style="left:30%">💖</span>
+  <span style="left:50%">💕</span>
+  <span style="left:70%">💞</span>
+  <span style="left:90%">💗</span>
+</div>
+
+<!-- SLIDE 1 -->
+<div class="slide slide1 active">
+  <div>
+    <h1 class="typing" id="typeText"></h1>
+    <p>
+      “On your birthday, I just want you to know <br>
+      how much you mean to my heart <br>
+      —more than words can hold 🫂”
+    </p>
+    <button class="btn">Let’s start the celebration 🎉</button><br><br>
+    <button class="btn">Tap anywhere to see what you mean to me 🥹</button>
+  </div>
+</div>
+
+<!-- SLIDE 2 -->
+<div class="slide slide2">
+  <h2>Our Beautiful Memories 💌</h2>
+  <div class="grid">
+    <div class="photo-box">
+      <div class="img" style="background-image:url('images/img1.jpg')"></div>
+      <div class="msg">My favorite moment 💕</div>
+    </div>
+    <div class="photo-box">
+      <div class="img" style="background-image:url('images/img2.jpg')"></div>
+      <div class="msg">Always us ❤️</div>
+    </div>
+    <div class="photo-box">
+      <div class="img" style="background-image:url('images/img3.jpg')"></div>
+      <div class="msg">Forever special ✨</div>
+    </div>
+    <div class="photo-box">
+      <div class="img" style="background-image:url('images/img4.jpg')"></div>
+      <div class="msg">Pure happiness 😊</div>
+    </div>
+    <div class="photo-box">
+      <div class="img" style="background-image:url('images/img5.jpg')"></div>
+      <div class="msg">Unforgettable 💞</div>
+    </div>
+    <div class="photo-box">
+      <div class="img" style="background-image:url('images/img6.jpg')"></div>
+      <div class="msg">Just love 💖</div>
+    </div>
+  </div>
+</div>
+
+<!-- SLIDE 3 -->
+<div class="slide slide3">
+  <div class="card">
+    <h2>A Special Message for You 💗</h2>
+    <p>
+      “From the day we found love 🤍, we’ve grown through every high and low together 🌱. 
+      We’ve faced misunderstandings, challenges, and tough moments 💔✨, but we never stopped choosing each other 🫶.
+      This is your third birthday with me 🎂, and I’m grateful for the love, strength, and patience we share 💖.
+      As we focus on our dreams today 🌟 and a future together tomorrow 🤍, 
+      I wish you nothing but happiness 😊, peace 🕊️, and all the love you truly deserve 💫.
+      Happy Birthday chinnu 🥹.”<br><br>
+      “ನೀನು ನನ್ನ ಜೀವನಕ್ಕೆ ಬಂದ ದಿನದಿಂದಲೇ ಪ್ರೀತಿ ಅರ್ಥವಾಯಿತು.
+      ನಿನ್ನ ಜೀವನ ಸದಾ ಸಂತೋಷ, ಶಾಂತಿ ಮತ್ತು ಕನಸುಗಳು ನನಸಾಗುವ ಬೆಳಕಿನಿಂದ ತುಂಬಿರಲಿ — 
+      ಹುಟ್ಟುಹಬ್ಬದ ಹಾರ್ದಿಕ ಶುಭಾಶಯಗಳು.” 💙
+    </p>
+  </div>
+</div>
+
+<script>
+let current = 0;
+const slides = document.querySelectorAll('.slide');
+const music = document.getElementById("bgMusic");
+let musicStarted = false;
+
+function nextSlide(){
+  if(!musicStarted){
+    music.play();
+    musicStarted = true;
+  }
+  slides[current].classList.remove('active');
+  current = (current + 1) % slides.length;
+  slides[current].classList.add('active');
+}
+
+/* ✅ Two-line typing text */
+const text = "Happy Birthday\nBaby! 💕";
+let i = 0;
+function type(){
+  if(i < text.length){
+    document.getElementById("typeText").innerHTML += text.charAt(i);
+    i++;
+    setTimeout(type,120);
+  }
+}
+type();
+</script>
+
+</body>
+</html>
